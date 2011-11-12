@@ -26,8 +26,4 @@ class data:
 		return imagearray
 	
 
-if __name__ == "__main__":
-	d = data()
-	np.set_printoptions(suppress=True)
-	print d.getNormalizedArray(d.getImageArray("../images/t1.bmp"))
 
