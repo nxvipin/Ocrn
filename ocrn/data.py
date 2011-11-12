@@ -17,7 +17,7 @@ class data:
 						if array[i,j] < array[x,y] and array[i,j] < array[x,y]-0.2*c:
 							array[i,j]=array[x,y]-0.2*c
 	
-	# Returns a Normalized 2D Array. 
+	# Returns a Normalized 2D Array from an Input Array. 
 	# normalizeArrayCell is called for all non zero cells
 	def getNormalizedArray(self, imagearray):
 		nonzerocells = np.transpose(imagearray.nonzero())
@@ -25,5 +25,9 @@ class data:
 			self.normalizeArrayCell(imagearray, nonzerocells[i][0],nonzerocells[i][1])
 		return imagearray
 	
+	# Returns Normalized 2D array from an Image
+	def getNormalizedImageArray(self, imagepath):
+		return self.getNormalizedArray(self.getImageArray(imagepath))
+
 
 
