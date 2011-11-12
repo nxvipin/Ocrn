@@ -44,8 +44,4 @@ class feature:
 		vector = np.resize(array,(1,100))
 		return vector[0]
 
-if __name__ == "__main__":
-	np.set_printoptions(suppress=True)
-	print feature.getImageFeatureVector("../images/t33.bmp")
-
 
