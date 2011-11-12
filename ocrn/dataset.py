@@ -8,7 +8,7 @@ class dataset:
 		self.labelsize = labelsize
 		self.DS = SupervisedDataSet(self.inputsize, self.labelsize)
 	
-	def addData(self,inputdata, labeldata):
+	def addTrainingData(self,inputdata, labeldata):
 		try:
 			if inputdata.size == self.inputsize and labeldata.size == self.labelsize:
 				self.DS.appendLinked(inputdata, labeldata)
@@ -16,3 +16,6 @@ class dataset:
 		except AttributeError:
 			print "Input error."
 			return 0
+	
+	def getTrainingDataset(self):
+		return self.DS
