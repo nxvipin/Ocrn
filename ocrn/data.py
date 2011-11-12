@@ -28,6 +28,13 @@ class data:
 	# Returns Normalized 2D array from an Image
 	def getNormalizedImageArray(self, imagepath):
 		return self.getNormalizedArray(self.getImageArray(imagepath))
+	
+	# Returns Feature Vector of an Image
+	def getImageFeatureVector(self, imagepath):
+		array = self.getNormalizedImageArray(imagepath)
+		vector = np.resize(array,(1,100))
+		return vector[0]
+
 
 
 
