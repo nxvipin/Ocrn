@@ -1,6 +1,7 @@
 from pybrain.datasets import SupervisedDataSet
 import numpy as np
-import feature as fr
+import feature as ft
+import fileinput
 
 class dataset:
 	# Initialize the dataset with input and label size
@@ -21,3 +22,9 @@ class dataset:
 	
 	def getTrainingDataset(self):
 		return self.DS
+	
+	def generateDataSet(self):
+		for line in fileinput.input(['data/inputdata']):
+			x = line.split(':')
+			self.addTrainingData(ft.feature.getImageFeatureVector(x[0]),np.array([int(x[1])]))
+		return 1
