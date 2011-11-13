@@ -8,8 +8,6 @@ class neuralnet:
 			self.inputdimension = args[0]
 			self.outputdimension = args[len(args)-1]
 			self.nnet.sortModules()
-			
-			print self.nnet
 		else:
 			print "Number of layers must be greater than or equal to two\n"
 
