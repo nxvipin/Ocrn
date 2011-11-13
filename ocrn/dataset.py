@@ -3,11 +3,13 @@ import numpy as np
 import feature as fr
 
 class dataset:
+	# Initialize the dataset with input and label size
 	def __init__(self, inputsize, labelsize):
 		self.inputsize = inputsize
 		self.labelsize = labelsize
 		self.DS = SupervisedDataSet(self.inputsize, self.labelsize)
 	
+	# Adds data to existing training dataset
 	def addTrainingData(self,inputdata, labeldata):
 		try:
 			if inputdata.size == self.inputsize and labeldata.size == self.labelsize:
