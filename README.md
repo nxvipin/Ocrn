@@ -5,4 +5,4 @@
 ##Installation
 * Install [Numpy](http://numpy.scipy.org/) 
 * Install [Pybrain](https://github.com/pybrain/pybrain) and its [dependencies](https://github.com/pybrain/pybrain/wiki/Dependencies)
-
+* Run main.py
