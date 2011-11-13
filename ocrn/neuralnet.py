@@ -26,12 +26,13 @@ class neuralnet:
 	# Train the neural network 'n' times with loaded training data.
 	def teach(self, n):
 		for i in range (1, n+1):
-			print self.trainer.train()
+			print str(i) + " : " + str(self.trainer.train())
 
 	# Activate the Neural Network with test data. Returns calculated output.
 	def activate(self, testdata):
 		if testdata.size == self.inputdimension:
-			return self.nnet.acivate(testdata)
+			x = self.nnet.activate(testdata)
+			return int(round(x[0],0))
 		else:
 			print "Test data error\n"
 			return 0
