@@ -3,7 +3,7 @@ from ocrn import feature as ft
 from ocrn import neuralnet as nt
 import numpy as np
 
-print "\n\nOcrn: Optical Character Recognition using Neural Network\n"
+print "Ocrn: Optical Character Recognition using Neural Network\nLatest version available at http://github.com/swvist\n"
 
 n = nt.neuralnet(100,80,1)
 print "Neural Network Initialized"
